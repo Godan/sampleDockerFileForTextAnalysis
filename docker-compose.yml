@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+
+  flask_api:
+      build: ./Docker/flask
+      # ports:
+      #  - "5000:5000"
+      volumes:
+       - ./src/flask/:/code
+      ports:
+       - "80:80"
+      restart: always
